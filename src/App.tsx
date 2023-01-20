@@ -1,12 +1,14 @@
 import "./App.css";
+import VBHeader from "./components/header/VBHeader";
+import Vehicles from "./containers/vehicles/Vehicles";
 
-function App() {
+const App = () => {
   return (
-    <div className="App ">
-      <h1 className="text-5xl font-bold">Hello world!</h1>
-      <h1 className=""></h1>
+    <div className="App bg-slate-800">
+      <VBHeader />
+      <Vehicles />
     </div>
   );
-}
+};
 
 export default App;
