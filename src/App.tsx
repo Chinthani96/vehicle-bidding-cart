@@ -4,7 +4,7 @@ import Vehicles from "./containers/vehicles/Vehicles";
 
 const App = () => {
   return (
-    <div className="App bg-slate-800">
+    <div className="App bg-slate-800 overflow-auto">
       <VBHeader />
       <Vehicles />
     </div>
