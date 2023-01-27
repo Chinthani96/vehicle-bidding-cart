@@ -1,3 +1,5 @@
+import BiddingForm from "../bidding/BiddingForm";
+
 const VehicleCard = () => {
   return (
     <div className="w-100 h-[30rem] rounded-md shadow-2xl p-5 text-text-color">
@@ -13,12 +15,7 @@ const VehicleCard = () => {
         officiis repellendus obcaecati quam fuga in reiciendis fugit possimus
         nesciunt molestias.
       </p>
-      <form action="" className="my-2">
-        <input type="text" className="rounded-sm h-[2rem]" />
-        <button className="rounded-sm bg-header-color text-bg mx-2 w-20 h-[2rem]">
-          + Add
-        </button>
-      </form>
+      <BiddingForm />
     </div>
   );
 };
