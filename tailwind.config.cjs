@@ -8,7 +8,8 @@ module.exports = {
       'text-color':'#ACA9BB',
       'header-color':'#ACA9BB',
       'bg':'#474747',
-      'teal':'#25766E'
+      'teal':'#25766E',
+      'backdrop':'rgba(0, 0, 0, 0.75)',
     },
   },
   plugins: [],
