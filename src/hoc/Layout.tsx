@@ -7,7 +7,7 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps) => {
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
 
   return (
     <>
