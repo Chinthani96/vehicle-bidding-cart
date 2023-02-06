@@ -2,7 +2,7 @@ import BiddingForm from "../bidding/BiddingForm";
 
 const VehicleCard = () => {
   return (
-    <div className="w-100 h-[30rem] rounded-md shadow-2xl p-5 text-text-color">
+    <div className="w-100 h-[38rem] rounded-md shadow-2xl p-5 text-text-color bg-card">
       <h3>Name</h3>
       <hr className="my-2" />
       <img
