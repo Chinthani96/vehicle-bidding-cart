@@ -1,9 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from ".";
 
-type Vehicle = {
+export type Vehicle = {
     id:String,
-    details:Object,
+    details:{
+       brand: String,
+       color: String,
+       currency: String,
+       description: String,
+       image:String,
+       manufactureYear:String,
+       price:number 
+    },
     name:String
 }
 
