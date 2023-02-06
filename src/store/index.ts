@@ -1,4 +1,5 @@
-const { configureStore } = require("@reduxjs/toolkit");
+import { configureStore } from "@reduxjs/toolkit";
+import vehicleSlice from "./vehicle-slice";
 
 const store = configureStore({
     reducer: {
