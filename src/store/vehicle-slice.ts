@@ -2,24 +2,26 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from ".";
 
 export type Vehicle = {
-    id:String,
+    id:string,
     details:{
-       brand: String,
-       color: String,
-       currency: String,
-       description: String,
-       image:String,
-       manufactureYear:String,
+       brand: string,
+       color: string,
+       currency: string,
+       description: string,
+       image:string,
+       manufactureYear:string,
        price:number 
     },
-    name:String
+    name:string
 }
 
 export type VehicleState = {
-    vehicles: Vehicle[]
+    vehicles: Vehicle[],
+    brand: String
 }
 const initialState : VehicleState = {
-    vehicles:[]
+    vehicles:[],
+    brand:''
 }
 
 const vehicleSlice = createSlice({
@@ -28,12 +30,15 @@ const vehicleSlice = createSlice({
     reducers:{
         addToVehicles(state,action){
             state.vehicles = action.payload;
+        },
+        setBrand(state,action){
+            state.brand = action.payload
         }
     }
 })
 
 //actions
-export const {addToVehicles} = vehicleSlice.actions;
+export const {addToVehicles,setBrand} = vehicleSlice.actions;
 
 //selectors
 export const vehicleSelector = (state: RootState) => state.vehicle;

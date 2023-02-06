@@ -1,17 +1,17 @@
 import { useSelector } from "react-redux";
-import { Vehicle, vehicleSelector } from "../../store/vehicle-slice";
+import { vehicleSelector } from "../../store/vehicle-slice";
 import { useEffect, useState } from "react";
 
 const BrandFilter = () => {
   const { vehicles } = useSelector(vehicleSelector) || [];
-  const [brands, setBrands] = useState<String[]>([]);
+  const [brands, setBrands] = useState<string[]>([]);
 
   useEffect(() => {
     getBrands();
   }, [vehicles]);
 
   const getBrands = () => {
-    const unique: String[] = [];
+    const unique: string[] = [];
     vehicles.map((vehicle) =>
       unique.filter((a) => a == vehicle.details.brand).length > 0
         ? null
