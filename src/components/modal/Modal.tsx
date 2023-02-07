@@ -1,8 +1,16 @@
 import ReactDOM from "react-dom";
+import { useDispatch } from "react-redux";
+import { hideCart } from "../../store/ui-slice";
 
 const Backdrop = (props: { children: React.ReactNode }) => {
+  const dispatch = useDispatch();
   return (
-    <section className="h-screen bg-backdrop flex justify-center absolute bottom-0 left-0 right-0">
+    <section
+      className="h-screen bg-backdrop flex justify-center absolute bottom-0 left-0 right-0"
+      onClick={() => {
+        dispatch(hideCart());
+      }}
+    >
       {props.children}
     </section>
   );
@@ -27,10 +35,6 @@ const Modal = (props: { children: React.ReactNode }) => {
         </Backdrop>,
         PortalElement
       )}
-      {/* {ReactDOM.createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
-        PortalElement
-      )} */}
     </>
   );
 };

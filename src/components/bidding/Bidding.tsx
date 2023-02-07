@@ -1,4 +1,9 @@
-const Bidding = () => {
+const Bidding = (props: {
+  name: string;
+  price: string;
+  biddingPrice: string;
+  image: string;
+}) => {
   return (
     <>
       <div className="flex">

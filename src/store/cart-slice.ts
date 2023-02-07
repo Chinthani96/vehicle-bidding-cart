@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from ".";
 
 export type CartItem = {
     name:string,
@@ -28,6 +29,8 @@ const cartSlice = createSlice({
     }
 })
 
-export const {addToCart} = cartSlice.actions
+export const {addToCart} = cartSlice.actions;
+
+export const cartSelector = (state:RootState) => state.cart;
 
 export default cartSlice;
