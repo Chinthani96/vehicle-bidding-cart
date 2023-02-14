@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart-slice";
+import { setHasCartItems } from "../../store/ui-slice";
 
 type BiddingFormProps = {
   name: string;
@@ -19,6 +20,7 @@ const BiddingForm = (props: BiddingFormProps) => {
 
   const addToCartHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    dispatch(setHasCartItems());
     dispatch(addToCart({ name, price, image, biddingPrice }));
   };
 

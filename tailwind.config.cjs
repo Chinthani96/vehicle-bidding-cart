@@ -10,6 +10,7 @@ module.exports = {
       'bg':'#474747',
       'teal':'#25766E',
       'backdrop':'rgba(0, 0, 0, 0.75)',
+      'badge':'#CE4A50'
     },
   },
   plugins: [],

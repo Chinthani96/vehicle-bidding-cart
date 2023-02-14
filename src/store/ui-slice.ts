@@ -3,10 +3,12 @@ import { RootState } from '.';
 
 type CartState = {
     cartVisible:boolean,
+    hasCartItems:boolean
 }
 
 const initialState : CartState = {
-    cartVisible:false
+    cartVisible:false,
+    hasCartItems:false,
 }
 
 const uiSlice = createSlice({
@@ -14,15 +16,19 @@ const uiSlice = createSlice({
     initialState,
     reducers:{
         showCart(state){
-            state.cartVisible = true;
+            if(state.hasCartItems)
+                state.cartVisible = true;
         },
         hideCart(state){
             state.cartVisible = false;
+        },
+        setHasCartItems(state){
+            state.hasCartItems = true;
         }
     }
 })
 
-export const {showCart, hideCart} = uiSlice.actions;
+export const {showCart, hideCart, setHasCartItems} = uiSlice.actions;
 
 export const uiSelector = (state: RootState) => state.ui;
 
